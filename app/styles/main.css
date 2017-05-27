@@ -1,0 +1,55 @@
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Open Sans';
+    min-height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 90rem;
+}
+
+
+.left-menu {
+    background-color: rgb(58, 23, 63);
+    background-color: rgba(101,18,95,0.5);    
+    color: white;
+    display: block;
+    float:left;
+    width: 30%;
+    height: 100vh
+    
+}
+
+.chat-area {
+    background-color: antiquewhite;
+    color: rgb(58, 23, 63);
+    display: block;
+    float: right;
+    width: 70%;
+    height: 100vh;
+}
+
+.left-menu-container {
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.title {
+    font-family: fantasy;
+    font-size: 2.5rem;
+}
+
+.room-list {
+    font-size: 1.25rem;
+}
