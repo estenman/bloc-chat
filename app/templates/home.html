@@ -1,1 +1,2 @@
 <h1>Home Page</h1>
+<div ng-repeat="chatroom in home.availableRooms | filter:name">{{ chatroom.$value }}</div>
