@@ -1,8 +1,14 @@
-<div ng-controller="RoomAddCtrl as roomAdd">
-    <form novalidate>
-        <label>Enter a room name<input type="text" ng-model="roomAdd.roomx.myName" required/></label>
-        <input type="button" ng-click="cancel()" value="Cancel" />    
-        <input type="submit" ng-click="roomAdd.update()" value="Create Room" />
-    </form>
-    <p>form = {{roomAdd.roomx}}</p>
+<div ng-controller="ChatModalCtrl as $chatModal">  
+    <script type="text/ng-template" id="roomSubmit2.html">
+        <div ng-controller="RoomAddCtrl as roomAdd">
+            <form novalidate>
+                <label>Enter a room name<input type="text" ng-model="roomAdd.roomx.myName" required/></label>
+                <input type="button" ng-click="cancel()" value="Cancel" />    
+                <input type="submit" ng-click="roomAdd.update()" value="Create Room" />
+            </form>
+        </div>
+    </script>
+    
+    <button type="button" ng-click="$chatModal.open()">Create Room</button>
 </div>
+    

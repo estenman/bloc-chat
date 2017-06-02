@@ -2,6 +2,7 @@
     <section class="left-menu">
         <div class="left-menu-container">
             <h1 class="title">Bloc Chat</h1>
+            <ng-include src="'/templates/roomSubmit.html'"></ng-include>
             <div class="room-list" ng-repeat="chatroom in home.availableRooms">
                 <p>{{ chatroom.$value | roomFilter }}</p>
             </div>
@@ -9,6 +10,6 @@
     </section>
 
     <section class="chat-area">
-        <ng-include src="'/templates/roomSubmit.html'"></ng-include>
+        
     </section>
 </div>
