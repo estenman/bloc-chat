@@ -5,6 +5,8 @@
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/roomSubmit.html',
                 size: size,
+                controller: 'ModalInstanceCtrl',
+                controllerAs: '$ctrl'
             });
         };
     }
