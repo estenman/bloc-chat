@@ -4,12 +4,21 @@
             <h1 class="title">Bloc Chat</h1>
             <button type="button" ng-click="home.open()">Create Room</button>    
             <div class="room-list" ng-repeat="chatroom in home.availableRooms">
-                <p>{{ chatroom.$value | roomFilter }}</p>
+                <p ng-click="home.roomActivation(chatroom.$value); home.messageActivation(chatroom.$id)">{{ chatroom.$value }}</p>
             </div>
         </div>    
     </section>
 
     <section class="chat-area">
-        
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2 class="chat-room-title">{{ home.activeRoom }}</h2>
+            </div>
+            <div class="chat-rows">
+                <p ng-repeat="messages in home.activeMessage">
+                {{ messages.username }}<br>
+                {{ messages.content }} {{ messages.sentAt }} </p>
+            </div>
+        </div>    
     </section>
 </div>
