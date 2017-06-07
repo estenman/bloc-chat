@@ -9,10 +9,12 @@
                 controllerAs: '$ctrl'
             });
         };
+        
         this.activeRoom = {};
         this.roomActivation = function(selectedRoom) {
             this.activeRoom = selectedRoom;
         };
+        
         this.activeMessage = {};
         this.messageActivation = function(roomKey) {
             this.activeMessage = Message.getByRoomId(roomKey);

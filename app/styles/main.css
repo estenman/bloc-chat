@@ -50,26 +50,13 @@ body {
     font-size: 2.5rem;
 }
 
+.create-room-button {
+    margin-top: 25%;
+    padding: 10px 5px 10px 5px;
+}
+
 .room-list {
     font-size: 1.25rem;
-}
-
-.modal-content {
-    position: fixed;
-    background-color: white;
-    left: 10%;
-    top: 20%;
-    height: 10rem;
-    width: 25rem;
-}
-
-.modal-header {
-    background-color: lightgrey;
-    padding-left: 1%;
-}
-
-.modal-body {
-    padding-left: 1%;
 }
 
 .chat-container {
@@ -82,3 +69,39 @@ body {
     font-size: 1.5rem;    
 }
 
+.user-name {
+    font-weight: 700;
+    padding-bottom: 5rem;
+}
+
+.even {
+    background-color: azure;
+    color: red;
+}
+
+/*Medium and small screens (640px) */
+@media (min-width: 640px) {
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }
+}
+
+.clearfix::before,
+
+.clearfix::after {
+    content: " ";
+    display: table;  
+}
+
+.clearfix::after {
+    clear: both;
+}

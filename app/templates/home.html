@@ -1,24 +1,40 @@
 <div class="container">   
-    <section class="left-menu">
+    <div class="left-menu"> 
         <div class="left-menu-container">
-            <h1 class="title">Bloc Chat</h1>
-            <button type="button" ng-click="home.open()">Create Room</button>    
-            <div class="room-list" ng-repeat="chatroom in home.availableRooms">
-                <p ng-click="home.roomActivation(chatroom.$value); home.messageActivation(chatroom.$id)">{{ chatroom.$value }}</p>
-            </div>
+            <section class="clearfix">    
+                <div class ="column two-thirds ">
+                    <h1 class="title">Bloc Chat</h1>
+                </div>
+                <div class="column third">
+                    <button class="create-room-button" type="button" ng-click="home.open()">New Room</button>
+                </div>
+                <div class="clearfix">
+                    <div class="room-list column full" ng-repeat="chatroom in home.availableRooms">
+                        <p ng-click="home.roomActivation(chatroom.$value); home.messageActivation(chatroom.$id)">{{ chatroom.$value }}</p>
+                    </div>
+                </div>    
+            </section>
         </div>    
-    </section>
+    </div>
 
-    <section class="chat-area">
+    <div class="chat-area">
         <div class="chat-container">
-            <div class="chat-header">
-                <h2 class="chat-room-title">{{ home.activeRoom }}</h2>
-            </div>
-            <div class="chat-rows">
-                <p ng-repeat="messages in home.activeMessage">
-                {{ messages.username }}<br>
-                {{ messages.content }} {{ messages.sentAt }} </p>
-            </div>
-        </div>    
-    </section>
+            <section>
+                <div class="chat-header">
+                    <h2 class="chat-room-title">{{ home.activeRoom }}</h2>
+                </div>
+                <div class="clearfix">
+                    <div ng-repeat="messages in home.activeMessage">
+                        <div ng-class-even="'even'">
+                            <p class="column two-thirds">
+                                <span class="user-name">{{ messages.username }}</span><br>
+                                {{ messages.content }}
+                            </p>    
+                            <p class="column third"> {{ messages.sentAt }}</p>   
+                        </div>
+                    </div>
+                </div>    
+            </section> 
+        </div>
+    </div>
 </div>
