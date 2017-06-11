@@ -3,12 +3,10 @@
         <h3 class="modal-header-text">Set a username</h3>
     </div>  
     <div class="modal-body">
-        <div ng-controller="UserAddCtrl as userAdd">
-            <form novalidate>
-                <label>This name will appear when you send messages <input type="text" ng-model="userAdd.userEntry.name" required/></label>
-                <br/><br/>  
-                <input type="submit" ng-click="userAdd.update()" value="Set username" />
-            </form>
-        </div>
+        <form novalidate>
+            <label>This name will appear when you send messages <input type="text" ng-model="userAdd.userEntry.name" required/></label>
+            <br/><br/>  
+            <input type="submit" ng-click="userAdd.update()" value="Set username" />
+        </form>
     </div>
 </div>

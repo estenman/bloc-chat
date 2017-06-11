@@ -1,19 +1,18 @@
 (function () {
-    function UserAddCtrl($cookies, /*$uibModalInstance, Cookies*/) {
+    function UserAddCtrl($cookies, $uibModalInstance) {
         this.user = {};
         this.update= function() {
             this.user = angular.copy(this.userEntry);
-            $cookies.put('blocChatCurrentUser', 'this.user');
-            console.log('cookies', $cookies.blocChatCurrentUser);
-            /*$cookiectrl.cancel(); */
+            $cookies.put('blocChatCurrentUser', this.user.name);
+            console.log('this.user', this.user.name);
+            this.cancel();
             };
-        /*var $cookiectrl = this;
-        $cookiectrl.cancel = function () {
+        this.cancel = function () {
             $uibModalInstance.dismiss('cancel'); 
-        }*/
+        }
     }
     
     angular
         .module('blocChat')
-        .controller('UserAddCtrl', ['$cookies', /*'$uibModalInstance', 'Cookies',*/ UserAddCtrl]);
+        .controller('UserAddCtrl', ['$cookies', '$uibModalInstance', UserAddCtrl]);
 })();

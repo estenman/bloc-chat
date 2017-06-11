@@ -12,6 +12,7 @@
         
         this.activeRoom = {};
         this.roomActivation = function(selectedRoom) {
+            console.log('selected room', selectedRoom);
             this.activeRoom = selectedRoom;
         };
         
@@ -19,6 +20,9 @@
         this.messageActivation = function(roomKey) {
             this.activeMessage = Message.getByRoomId(roomKey);
         };
+        
+        this.firstRoom = Room.first;
+        console.log('first value', Room.first);
     }
     
     angular

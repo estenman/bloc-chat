@@ -5,7 +5,7 @@
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/usernameSubmit.html',
                 controller: 'UserAddCtrl',
-                controllerAs: '$cookiectrl'
+                controllerAs: 'userAdd'
             })
         }
     }

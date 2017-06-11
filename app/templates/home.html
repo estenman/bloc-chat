@@ -12,7 +12,8 @@
                     <div class="room-list column full" ng-repeat="chatroom in home.availableRooms">
                         <p ng-click="home.roomActivation(chatroom.$value); home.messageActivation(chatroom.$id)">{{ chatroom.$value }}</p>
                     </div>
-                </div>    
+                </div> 
+                <p>{{ home.firstRoom }}test</p>
             </section>
         </div>    
     </div>
