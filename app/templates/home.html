@@ -13,7 +13,6 @@
                         <p ng-click="home.roomActivation(chatroom.$value); home.messageActivation(chatroom.$id)">{{ chatroom.$value }}</p>
                     </div>
                 </div> 
-                <p>{{ home.firstRoom }}test</p>
             </section>
         </div>    
     </div>
@@ -22,11 +21,12 @@
         <div class="chat-container">
             <section>
                 <div class="chat-header">
-                    <h2 class="chat-room-title">{{ home.activeRoom }}</h2>
-                </div>
-                <div class="clearfix">
+                    <h2 class="chat-room-title" ng-show="!home.activeRoomSelected">{{ home.availableRooms[0].$value }}</h2>
+                    <h2 class="chat-room-title" ng-show="home.activeRoomSelected">{{ home.activeRoom }}</h2>
+                </div>  
+                <div class="clearfix" >
                     <div ng-repeat="messages in home.activeMessage">
-                        <div ng-class-even="'even'">
+                        <div ng-class-even="'even'" class="evenfix">
                             <p class="column two-thirds">
                                 <span class="user-name">{{ messages.username }}</span><br>
                                 {{ messages.content }}
@@ -34,7 +34,7 @@
                             <p class="column third"> {{ messages.sentAt }}</p>   
                         </div>
                     </div>
-                </div>    
+                </div>                 
             </section> 
         </div>
     </div>

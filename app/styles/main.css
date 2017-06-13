@@ -76,7 +76,10 @@ body {
 
 .even {
     background-color: white;
-    color: red;
+}
+
+.evenfix {
+   overflow: hidden; 
 }
 
 /*Medium and small screens (640px) */
