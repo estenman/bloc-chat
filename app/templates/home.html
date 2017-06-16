@@ -21,10 +21,11 @@
         <div class="chat-container">
             <section>
                 <div class="chat-header">
-                    <h2 class="chat-room-title" ng-show="!home.activeRoomSelected">{{ home.availableRooms[0].$value }}</h2>
+                    <h2 class="chat-room-title" ng-show="!home.activeRoomSelected"></h2>
                     <h2 class="chat-room-title" ng-show="home.activeRoomSelected">{{ home.activeRoom }}</h2>
                 </div>  
                 <div class="clearfix" >
+                    <p ng-show="!home.activeRoomSelected"><strong>Select a chatroom to get started.</strong></p>
                     <div ng-repeat="messages in home.activeMessage">
                         <div ng-class-even="'even'" class="evenfix">
                             <p class="column two-thirds">
@@ -35,7 +36,13 @@
                         </div>
                     </div>
                 </div>                 
-            </section> 
+            </section>
+            <section ng-show="home.activeRoomSelected" class="message-entry-container">
+                <form novalidate>
+                    <input type="text" ng-model="home.messageObject.content" placeholder="Enter your message here" class="column three-fourths message-entry-field" required/>   
+                    <input type="submit" ng-click="home.messageSubmit()" value="Send" class="column fourth message-entry-field"/>
+                </form>
+            </section>
         </div>
     </div>
 </div>

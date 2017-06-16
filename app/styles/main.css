@@ -82,6 +82,19 @@ body {
    overflow: hidden; 
 }
 
+.message-entry-container {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 3rem;
+    width: 70%;
+    background-color: aqua;
+}
+
+.message-entry-field {
+    height: 3rem;
+}
+
 /*Medium and small screens (640px) */
 @media (min-width: 640px) {
     .column {
@@ -91,6 +104,7 @@ body {
     }
     
     .column.full { width: 100%; }
+    .column.three-fourths {width: 75%;}
     .column.two-thirds { width: 66.7%; }
     .column.half { width: 50%; }
     .column.third { width: 33.3%; }

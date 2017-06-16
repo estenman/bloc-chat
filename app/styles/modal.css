@@ -2,8 +2,8 @@
 .modal-content {
     position: fixed;
     background-color: white;
-    left: 10%;
-    top: 20%;
+    left: 40%;
+    top: 30%;
     height: 8rem;
     width: 25rem;
 }

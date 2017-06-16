@@ -4,7 +4,6 @@
         this.update= function() {
             this.user = angular.copy(this.userEntry);
             $cookies.put('blocChatCurrentUser', this.user.name);
-            console.log('this.user', this.user.name);
             this.cancel();
             };
         this.cancel = function () {
